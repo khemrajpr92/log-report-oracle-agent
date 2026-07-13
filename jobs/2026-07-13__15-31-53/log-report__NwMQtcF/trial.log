@@ -1,0 +1,30 @@
+Trial log-report__NwMQtcF failed: Docker compose command failed for environment log-report. Command: docker compose --project-name log-report__nwmqtcf__env --project-directory /mnt/c/Users/SERC/Downloads/fix-task-broken/log-report/environment -f /tmp/tmpu9jcxzg0/log-report__NwMQtcF__env-docker-compose-resources.json -f /home/khemraj/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/environments/docker/docker-compose-build.yaml -f /tmp/tmpx3uj2m9w/docker-compose-mounts.json build. Return code: 1. Stdout:  Image log-report__nwmqtcf__env-main Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 610B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 319B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.11-slim@sha256:c4d0d02ece8f8bbd3b06af3d2f3a33c93f92fb31e1b76dc4c6bb1bacf9e8b5a5
+#3 ERROR: docker.io/library/python:3.11-slim@sha256:c4d0d02ece8f8bbd3b06af3d2f3a33c93f92fb31e1b76dc4c6bb1bacf9e8b5a5: not found
+------
+ > [internal] load metadata for docker.io/library/python:3.11-slim@sha256:c4d0d02ece8f8bbd3b06af3d2f3a33c93f92fb31e1b76dc4c6bb1bacf9e8b5a5:
+------
+Dockerfile:1
+
+--------------------
+
+   1 | >>> FROM python:3.11-slim@sha256:c4d0d02ece8f8bbd3b06af3d2f3a33c93f92fb31e1b76dc4c6bb1bacf9e8b5a5
+
+   2 |     
+
+   3 |     RUN pip install --no-cache-dir pytest==8.4.1 pytest-json-ctrf==0.3.5
+
+--------------------
+
+failed to solve: python:3.11-slim@sha256:c4d0d02ece8f8bbd3b06af3d2f3a33c93f92fb31e1b76dc4c6bb1bacf9e8b5a5: failed to resolve source metadata for docker.io/library/python:3.11-slim@sha256:c4d0d02ece8f8bbd3b06af3d2f3a33c93f92fb31e1b76dc4c6bb1bacf9e8b5a5: docker.io/library/python:3.11-slim@sha256:c4d0d02ece8f8bbd3b06af3d2f3a33c93f92fb31e1b76dc4c6bb1bacf9e8b5a5: not found
+
+. Stderr: None. 
+Collecting main service artifacts

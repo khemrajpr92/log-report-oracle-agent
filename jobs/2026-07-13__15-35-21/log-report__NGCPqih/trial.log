@@ -1,0 +1,64 @@
+Trial log-report__NGCPqih failed: Docker compose command failed for environment log-report. Command: docker compose --project-name log-report__ngcpqih__env --project-directory /mnt/c/Users/SERC/Downloads/fix-task-broken/log-report/environment -f /tmp/tmp5jqneul8/log-report__NGCPqih__env-docker-compose-resources.json -f /home/khemraj/.local/share/uv/tools/harbor/lib/python3.13/site-packages/harbor/environments/docker/docker-compose-build.yaml -f /tmp/tmpq3rkdsp2/docker-compose-mounts.json build. Return code: 1. Stdout:  Image log-report__ngcpqih__env-main Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 610B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 258B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.11.9-slim-bookworm
+#3 DONE 2.3s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [1/7] FROM docker.io/library/python:3.11.9-slim-bookworm@sha256:8fb099199b9f2d70342674bd9dbccd3ed03a258f26bbd1d556822c6dfc60c317
+#5 resolve docker.io/library/python:3.11.9-slim-bookworm@sha256:8fb099199b9f2d70342674bd9dbccd3ed03a258f26bbd1d556822c6dfc60c317 0.0s done
+#5 CANCELED
+
+#6 [internal] load build context
+#6 transferring context: 515B 0.0s done
+#6 DONE 0.1s
+
+#7 [2/7] RUN pip install --no-cache-dir pytest==8.4.1 pytest-json-ctrf==0.3.5
+#7 CACHED
+
+#8 [3/7] WORKDIR /app
+#8 CACHED
+
+#9 [4/7] COPY access.log /app/access.log
+#9 CACHED
+
+#10 [6/7] COPY tests/ /tests/
+#10 ERROR: failed to calculate checksum of ref xkqsgde1itkptrk83zthdq6zj::rz9z9oykgjayt017t7y588tb8: "/tests": not found
+
+#11 [5/7] COPY solution/ /app/
+#11 ERROR: failed to calculate checksum of ref xkqsgde1itkptrk83zthdq6zj::rz9z9oykgjayt017t7y588tb8: "/solution": not found
+------
+ > [5/7] COPY solution/ /app/:
+------
+------
+ > [6/7] COPY tests/ /tests/:
+------
+Dockerfile:9
+
+--------------------
+
+   7 |     COPY access.log /app/access.log
+
+   8 |     COPY solution/ /app/
+
+   9 | >>> COPY tests/ /tests/
+
+  10 |     
+
+  11 |     RUN chmod +x /app/solve.sh
+
+--------------------
+
+failed to solve: failed to compute cache key: failed to calculate checksum of ref xkqsgde1itkptrk83zthdq6zj::rz9z9oykgjayt017t7y588tb8: "/tests": not found
+
+. Stderr: None. 
+Collecting main service artifacts
